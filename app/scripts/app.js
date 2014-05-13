@@ -7,7 +7,7 @@
 */
 'use strict';
 
-angular.module('fdApp', ['ngRoute'])
+angular.module('fdApp', ['ngRoute', 'angularFileUpload'])
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {

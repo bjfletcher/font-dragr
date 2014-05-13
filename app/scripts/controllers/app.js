@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter', 'Font', function ($scope, $location, $filter, Font) {
+angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter', '$upload', 'Font', function ($scope, $location, $filter, $upload, Font) {
 
     $scope.routeIs = function (route) {
         return $location.path() === route;
@@ -25,6 +25,8 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
             isFile = files && files.length;
 
         $scope.$emit('addFont', payload, isFile);
+
+        $scope.$emit('uploadFont', payload, isFile);
     };
 
     $scope.year = (new Date()).getFullYear();
@@ -47,5 +49,33 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
     };
 
     $scope.$on('addFont', $scope.addFont);
+
+    $scope.uploadFont = function (scope, payload, isFile) {
+        if (!isFile) {
+            return;
+        }
+
+        var files = payload.length ? payload : [payload];
+
+        var progress = function(evt) {
+            console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total, 10));
+        };
+
+        var success = function(data, status, headers, config) {
+            // file is uploaded successfully
+            console.log(data, status, headers, config);
+        };
+
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            $upload.upload({
+                url: 'server/upload/url',
+                file: file
+            }).progress(progress).success(success);
+        }
+
+    };
+
+    $scope.$on('uploadFont', $scope.uploadFont);
 
 }]);
