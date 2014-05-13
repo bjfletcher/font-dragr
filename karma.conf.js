@@ -7,8 +7,10 @@ basePath = '';
 files = [
   JASMINE,
   JASMINE_ADAPTER,
+  'app/components/ng-file-upload/angular-file-upload-shim.js',
   'app/components/angular/angular.js',
   'app/components/angular-route/angular-route.js',
+  'app/components/ng-file-upload/angular-file-upload.js',
   'app/components/angular-mocks/angular-mocks.js',
   'app/scripts/*.js',
   'app/scripts/**/*.js',

@@ -69,7 +69,7 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
         for (var i = 0; i < files.length; i++) {
             var file = files[i];
             $upload.upload({
-                url: 'server/upload/url',
+                url: 'upload',
                 file: file
             }).progress(progress).success(success);
         }
