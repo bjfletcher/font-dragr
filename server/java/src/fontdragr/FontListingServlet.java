@@ -35,7 +35,7 @@ public class FontListingServlet extends HttpServlet {
 
                     for (File font : fonts) {
                         String size = (font.length() / 1000) + "kb";
-                        json.append(" { \"name\": \"" + font.getName() + "\", \"size\": \"" + size + "\" },");
+                        json.append(" { \"name\": \"" + font.getName() + "\", \"size\": \"" + size + "\", \"author\": \"\", \"authorurl\": \"\", \"license\": \"\", \"licenseurl\": \"\" },");
                     }
 
                     int comma = json.lastIndexOf(",");
