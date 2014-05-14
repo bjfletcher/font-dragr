@@ -52,14 +52,19 @@ public class FontListingServlet extends HttpServlet {
 
             } else {
 
-                if (resource.toLowerCase().endsWith(".ttf")) {
-                    res.setContentType("application/x-font-ttf");
-                } else if (resource.toLowerCase().endsWith(".otf")) {
-                    res.setContentType("application/x-font-opentype");
-                } else if (resource.toLowerCase().endsWith(".woff")) {
-                    res.setContentType("application/font-woff");
-                } else if (resource.toLowerCase().endsWith(".eot")) {
-                    res.setContentType("application/vnd.ms-fontobject");
+                String name = resource.toLowerCase();
+                String type = null;
+                if (name.endsWith(".ttf")) {
+                    type = "application/x-font-ttf";
+                } else if (name.endsWith(".otf")) {
+                    type = "application/x-font-opentype";
+                } else if (name.endsWith(".woff")) {
+                    type = "application/font-woff";
+                } else if (name.endsWith(".eot")) {
+                    type = "application/vnd.ms-fontobject";
+                }
+                if (type != null) {
+                    res.setContentType(type);
                 }
 
                 File font = new File(FOLDER + File.separator + resource);

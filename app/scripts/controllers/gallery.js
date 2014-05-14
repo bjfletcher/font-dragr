@@ -8,10 +8,7 @@ angular.module('fdApp').controller('GalleryCtrl', ['$scope', '$http', function($
         });
 
     $scope.loadFont = function(url) {
-        $http.get(url + '/index.json')
-            .success(function(data) {
-                $scope.$emit('addFont', data);
-            });
+        $scope.$emit('addFont', $scope.gallery[url]);
     };
 
 }]);
