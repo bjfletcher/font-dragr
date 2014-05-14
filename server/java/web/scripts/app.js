@@ -13,10 +13,7 @@ angular.module('fdApp', [
   '$routeProvider',
   '$locationProvider',
   function ($routeProvider, $locationProvider) {
-    $routeProvider.when('/', { templateUrl: 'views/main.html' }).when('/editor', { templateUrl: 'views/editor.html' }).when('/gallery', {
-      templateUrl: 'views/gallery.html',
-      controller: 'GalleryCtrl'
-    }).otherwise({ redirectTo: '/' });
+    $routeProvider.when('/', { templateUrl: 'views/main.html' }).otherwise({ redirectTo: '/' });
     $locationProvider.html5Mode(true);
   }
 ]);

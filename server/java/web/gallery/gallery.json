@@ -1,6 +1,7 @@
 [
     {
         "name": "sky_regular-ttf",
+        "url": "gallery/sky_regular.ttf",
         "size": "58kb",
         "author": "",
         "authorurl": "",
@@ -9,6 +10,7 @@
     },
     {
         "name": "sky_regular-eot",
+        "url": "gallery/sky_regular.eot",
         "size": "30kb",
         "author": "",
         "authorurl": "",

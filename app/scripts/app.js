@@ -13,13 +13,6 @@ angular.module('fdApp', ['ngRoute', 'angularFileUpload'])
             .when('/', {
                 templateUrl: 'views/main.html'
             })
-            .when('/editor', {
-                templateUrl: 'views/editor.html'
-            })
-            .when('/gallery', {
-                templateUrl: 'views/gallery.html',
-                controller: 'GalleryCtrl'
-            })
             .otherwise({
                 redirectTo: '/'
             });

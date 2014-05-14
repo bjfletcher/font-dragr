@@ -2,33 +2,45 @@
 <html ng-app="fdApp" ng-controller="AppCtrl">
   <head>
     <meta charset="utf-8"/>
-    <title>font dragr | Drag and drop font testing</title>
+    <title>font dragr | Drag and drop font testing for Sky</title>
     <meta name="description" content="Drag and drop font files into the browser and test in real time">
     <meta name="viewport" content="width=device-width">
 
     <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="//web-toolkit.global.sky.com/2.2.12/stylesheets/toolkit.css"/>
+    <link rel="stylesheet" href="//web-toolkit.global.sky.com/2.2.12/fonts/skycons.css"/>
     <link rel="stylesheet" href="styles/main.css"/>
     <link rel="stylesheet" href="styles/wfs.css"/>
-    <link rel="stylesheet" href="styles/mqs.css"/>
     <!-- endbuild -->
+
+    <!--[if IE 7]>         <html class="lt-ie10 lt-ie9 lt-ie8" > <![endif]-->
+    <!--[if IE 8]>         <html class="lt-ie10 lt-ie9" > <![endif]-->
+    <!--[if IE 9]>         <html class="lt-ie10" > <![endif]-->
+    <!--[if gt IE 9]><!--> <html lang="en" > <!--<![endif]-->
+
+    <!--[if lt IE 10]><script type="text/javascript">
+      document.createElement('header');
+      document.createElement('section');
+      document.createElement('footer');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('hgroup');
+      document.createElement('nav');
+      document.createElement('figure');
+      document.createElement('figcaption');
+    </script><![endif]-->
+
   </head>
   <body fd-dnd="handleDrop">
 
-    <div class="maincontainer">
+    <div class="skycom-container">
         <header class="clearfix">
             <div class="container">
-                <div class="logo">fd</div>
                 <hgroup role="heading">
-                    <h1>font dragr</h1>
-                    <h2>Drag and drop font testing</h2>
+                    <h1>font dragr for <img class="sky-logo" src="http://skyglobal.github.io/web-toolkit/static/images/sky-logo.png"/></h1>
+                    <h3>Drag and drop font anywhere here for testing</h3>
+                    <h5>P.S. fonts uploaded are persistent on this site (useful for testing on iOS/Android devices)</h3>
                 </hgroup>
-                <nav>
-                    <ul role="tablist">
-                        <li ng-class="{active: routeIs('/')}"><a href="/">Home</a></li>
-                        <li ng-class="{active: routeIs('/editor')}"><a href="editor">Editor</a></li>
-                        <li ng-class="{active: routeIs('/gallery')}"><a href="gallery">Gallery</a></li>
-                    </ul>
-                </nav>
             </div>
         </header>
         <!-- Add your site or application content here -->
@@ -36,13 +48,7 @@
 
         <footer role="contentinfo">
             <div class="grid clearfix">
-                <p class="colx4">Copyright &copy; 2009 - {{year}}
-<a href="http://www.thecssninja.com/">Ryan Seddon</a></p>
-                <p class="colx8">Licensed under
-<a href="http://ryanseddon.mit-license.org/" target="_blank">MIT</a> |
-<a href="https://github.com/ryanseddon/font-dragr">Hack</a> |
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=seddon%2eryan%40gmail%2ecom&amp;lc=AU&amp;item_name=Donate%20and%20help%20make%20font%20dragr%20awesome&amp;item_number=fontdragr&amp;no_note=0&amp;currency_code=AUD&amp;bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest">Donate</a> |
-<a href="http://twitter.com/ryanseddon">Contact</a></p>
+                <p>Thanks to <a href="http://www.thecssninja.com/">Ryan Seddon</a> for <a href="https://github.com/ryanseddon/font-dragr">font dragr</a> | Licensed under <a href="http://ryanseddon.mit-license.org/" target="_blank">MIT</a></p>
             </div>
         </footer>
     </div>
@@ -55,7 +61,6 @@
     <script src="components/ng-file-upload/angular-file-upload.min.js"></script> 
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/app.js"></script>
-    <script src="scripts/controllers/gallery.js"></script>
     <script src="scripts/directives/fdDnd.js"></script>
     <script src="scripts/directives/fdTap.js"></script>
     <script src="scripts/directives/fdVideo.js"></script>

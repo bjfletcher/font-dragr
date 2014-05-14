@@ -516,12 +516,12 @@
       <changelist id="730252b1-6127-4ff7-86a0-b972675c8651" name="Default" comment="" />
       <created>1400063766217</created>
       <updated>1400063766217</updated>
-      <workItem from="1400063767483" duration="5824000" />
+      <workItem from="1400063767483" duration="7046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5824000" />
+    <option name="totallyTimeSpent" value="7046000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1281" height="845" extended-state="6" />
@@ -591,13 +591,6 @@
     <entry file="file://$PROJECT_DIR$/web/scripts/filters/fontfacecss.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="24" selection-start="52" selection-end="63" vertical-scroll-proportion="0.09803922" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/scripts/controllers/gallery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="230" selection-end="230" vertical-scroll-proportion="0.22875817" vertical-offset="0" max-vertical-offset="459">
           <folding />
         </state>
       </provider>

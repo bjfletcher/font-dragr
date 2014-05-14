@@ -6,6 +6,7 @@ angular.module('fdApp')
             if(!data.error) {
                 var font = [{
                     name: data.name,
+                    url: data.url,
                     size: data.size,
                     license: data.license,
                     licenseurl: data.licenseurl,

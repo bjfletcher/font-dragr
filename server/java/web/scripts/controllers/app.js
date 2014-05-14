@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter', '$upload', 'Font', function ($scope, $location, $filter, $upload, Font) {
+angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter', '$http', '$upload', 'Font', function ($scope, $location, $filter, $http, $upload, Font) {
 
     $scope.routeIs = function (route) {
         return $location.path() === route;
@@ -66,5 +66,21 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
     };
 
     $scope.$on('uploadFont', $scope.uploadFont);
+
+    $http.get('/gallery/gallery.json')
+        .success(function(data){
+            $scope.gallery = data;
+        });
+
+    $scope.loadFont = function(url) {
+        var name = url.split('/').reverse()[0];
+        for (var i = 0; i < $scope.gallery.length; i++) {
+            var font = $scope.gallery[i];
+            if (font.name === name) {
+                $scope.$emit('addFont', font);
+                break;
+            }
+        }
+    };
 
 }]);

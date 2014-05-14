@@ -1,64 +1,246 @@
-section#banner.clearfix(role='banner')
-  .container.grid
-    h1.colx8 A revolutionary way to test custom fonts in the browser. No coding, no uploading, just drag and drop.
-
-    aside.colx4(role='complementary')
-      div(fd-video='', src="http://www.screenr.com/embed/D8hs", height="200", width="300")
-
-.content.grid.clearfix
-
-  section.colx4(role='region')
-    h1 Drag your fonts here
+section.skycom-container
+  div.skycom-6
+    h4.u-centered
+      | Available
+    div(ng-repeat="font in gallery")
+      a.button.btn.btn--download.secondary(id="{{font.name}}", draggable="true", fd-tap="loadFont('gallery/{{font.name}}')")
+        | Load {{ font.url.split('/').reverse()[0] }} ({{ font.size }})
+    a.right.btn.secondary
+      | Delete All
+  div.skycom-6
+    h4.u-centered Loaded
     div(fd-font-list='')
+#wfs.skycom-container(contenteditable='true', ng-style="{ \'font-family\': font.activeFont }")
+  section.skycom-6(role='region')
+    h2
+      | Text sample 
+      span &#8211; CSS font-size (px) with 1.4em line-height
+    
+    p.s.s18
+      span 18
+      | Is not the best kind of originality that which comes after a sound apprenticeship? That which shall prove to be the blending of a firm conception of, &#8220;useful precedent&#8221;&hellip;
 
-  section#custom.colx8(role='main')
+    p.s.s14
+      span 14
+      | Is not the best kind of originality that which comes after a sound apprenticeship? That which shall prove to be the blending of a firm conception of, &#8220;useful precedent&#8221; and the progressive tendencies of&hellip;
 
-    .colx4.alpha
-      h1 What is it?
-      p font dragr allows you to easily test custom fonts, through the <code>@font-face</code> at-rule, without the need for any CSS coding or knowledge of CSS coding. All you need to do is drag and drop.
-      p It alleviates the cumbersome nature of testing custom fonts and allows you to quickly and easily load in a font, play around with it and see if it's the right one for you.
+    p.s.s12
+      span 12
+      | Is not the best kind of originality that which comes after a sound apprenticeship? That which shall prove to be the blending of a firm conception of, &#8220;useful precedent&#8221; and the progressive tendencies of an able mind. For, let a man be as able &amp; original&hellip;
 
-    .colx4.omega
-      h1 How do I use it?
-      p It's incredibly easy to use. All you need to do is drag and drop a font file from your computer into font dragr in a supporting browser (Such as Firefox 3.6+ or Chrome 6+).
-      p You can also select a font to test from the gallery. These fonts can be tested in most browsers, including IE6 and up.
+    p.s.s11
+      span 11
+      | Is not the best kind of originality that which comes after a sound apprenticeship? That which shall prove to be the blending of a firm conception of, &#8220;useful precedent&#8221; and the progressive tendencies of an able mind. For, let a man be as able &amp; original as he may&hellip;
 
-  section.colx12
-    h1.hr01
-      span The revolution doesn't end there
+    p.s.s10
+      span 10
+      | Is not the best kind of originality that which comes after a sound apprenticeship? That which shall prove to be the blending of a firm conception of, &#8220;useful precedent&#8221; and the progressive tendencies of an able mind. For, let a man be as able &amp; original as he may, he can&#8217;t afford to discard knowledge of what&hellip;
 
-    .colx8.alpha
-      h1 You can test on any website
-      p Testing fonts within font dragr, while useful, won't give the full look and feel of testing it on your own site. That's where the font dragr bookmarklet comes in handy.
-      p The bookmarklet allows you to test any font from your file system or any of the fonts found in the gallery. Same simple approach the web app has, with the added ability for testing on any website.
-      p To install the bookmarklet in your browser just drag and drop the button below to your bookmarks. If you're not sure where to drag it too or you want to get a quick inside look at how you can use it make sure to check out the bookmarklet screencast.
-      p 
-        | Drag the 
-        a.button.vomzom(href="javascript:(function(d){var%20s=d.createElement('script'),h=d.head||d.getElementsByTagName('head')[0];s.src=('https:' == document.location.protocol ? 'https://rawgithub.com/ryanseddon/font-dragr/master/bookmarklet/fd-script.js' : 'http://fontdragr.com/bookmarklet/fd-script.js');h.appendChild(s);})(document);") font dragr
-        |  bookmarklet to your bookmarks.
+    p.s.s9
+      span 9
+      | Is not the best kind of originality that which comes after a sound apprenticeship? That which shall prove to be the blending of a firm conception of, &#8220;useful precedent&#8221; and the progressive tendencies of an able mind. For, let a man be as able &amp; original as he may, he can&#8217;t afford to discard knowledge of what has gone before or what is now going&hellip;
 
-    .colx4.omega
-      h1 Bookmarklet in action
-      div(fd-video='', src="http://www.screenr.com/embed/P8hs", height="200", width="300")
+  section.skycom-6.charset(role='region')
+    h2 Characters
+    p.s.s56
+      | A&#8201;B&#8201;C&#8201;D&#8201;E&#8201;F&#8201;G&#8201;H&#8201;I&#8201;J&#8201;K&#8201;L&#8201;M&#8201;N&#8201;O&#8201;P&#8201;Q&#8201;R&#8201;S&#8201;T&#8201;U&#8201;V&#8201;W&#8201;X&#8201;Y&#8201;Z
+      br
+      | a&#8201;b&#8201;c&#8201;d&#8201;e&#8201;f&#8201;g&#8201;h&#8201;i&#8201;j&#8201;k&#8201;l&#8201;m&#8201;n&#8201;o&#8201;p&#8201;q&#8201;r&#8201;s&#8201;t&#8201;u&#8201;v&#8201;w&#8201;x&#8201;y&#8201;z
+      br
+      | 1&#8201;2&#8201;3&#8201;4&#8201;5&#8201;6&#8201;7&#8201;8&#8201;9&#8201;0&#8201;&amp;&#8201;@&#8201;.&#8201;,&#8201;?&#8201;!&#8201;&#8217;&#8201;&#8220;&#8201;&#8221;&#8201;(&#8201;)
 
-  section.colx12
-    h1.hr01
-      span The bookmarklet in three simple steps
+  section.skycom-12
+    h2 Body size comparison
+    .bodysize
+      table
+        tr
+          th.fontname &nbsp;
 
-    .colx4.alpha
-      h1 Load it
-      p
-        img(src='/images/gr_load.png')
-      p Load the font dragr bookmarklet in the website you wish to test. Once it loads it will appear at the top of the browser window ready to use.
+          th
+            | Arial
+            a(href='http://www.codestyle.org/servlets/FontStack?stack=Arial,Helvetica&generic=sans-serif') stack
+          th
+            | Times
+            a(href='http://www.codestyle.org/servlets/FontStack?stack=Times+New+Roman,Times&generic=serif') stack
+          th
+            | Georgia
+            a(href='http://www.codestyle.org/servlets/FontStack?stack=Georgia,New+Century+Schoolbook,Nimbus+Roman+No9+L&generic=serif') stack
+        tr
+          td
+            span Body
+          td.tf.typeface2
+            span Body
+          td.tf.typeface3
+            span Body
+          td.tf.typeface4
+            span Body
 
-    .colx4
-      h1 Drag it
-      p
-        img(src='/images/gr_drag.png')
-      p Drag and drop a font from your desktop or from the gallery. The last dropped font will become active and be applied to the body element by default.
+  section.skycom-12
+    h2
+      | Grayscale
+      span &#8211; CSS hex color on white
 
-    .colx4.omega
-      h1 Test it
-      p
-        img(src='/images/gr_test.png')
-      p With the bookmarklet you can target specific elements using CSS selectors. Or by selecting some text you can apply the custom font to a selection.
+    .grayscale.clearfix
+      .skycom-6.white.alpha
+        p.c000
+          span #000
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c333
+          span #333
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c666
+          span #666
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c999
+          span #999
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.cCCC
+          span #CCC
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+      .skycom-6.black.omega
+        p.cFFF
+          span #FFF
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.cCCC
+          span #CCC
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c999
+          span #999
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c666
+          span #666
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c333
+          span #333
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+
+  section.skycom-12
+    h2
+      | Grayscale
+      span &#8211; CSS hex color on black
+
+    .grayscale.u-blackBackground.clearfix
+      .skycom-6.white.alpha
+        p.c000
+          span #000
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c333
+          span #333
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c666
+          span #666
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c999
+          span #999
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.cCCC
+          span #CCC
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+      .skycom-6.black.omega
+        p.cFFF
+          span #FFF
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.cCCC
+          span #CCC
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c999
+          span #999
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c666
+          span #666
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+        p.c333
+          span #333
+          | The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+
+  section.ulc.clearfix
+    section.skycom-12
+      h2
+        | Size
+        span &#8211; CSS font-size (px)
+      p.s.s36
+        span 36
+        span.text Pack my box with five dozen liquor jugs.
+      p.s.s30
+        span 30
+        span.text Pack my box with five dozen liquor jugs.
+      p.s.s24
+        span 24
+        span.text Pack my box with five dozen liquor jugs.
+
+    section.skycom-8
+      p.s.s21
+        span 21
+        span.text Pack my box with five dozen liquor jugs.
+      p.s.s18
+        span 18
+        span.text Pack my box with five dozen liquor jugs.
+    section.skycom-4.upp
+      p.s.s9
+        span 9
+        span.text Pack my box with five dozen liquor jugs
+      p.s.s10
+        span 10
+        span.text Pack my box with five dozen liquor jugs
+
+    .clearfix
+
+    section.skycom-6
+      p.s.s16
+        span 16
+        span.text Pack my box with five dozen liquor jugs.
+      p.s.s14
+        span 14
+        span.text Pack my box with five dozen liquor jugs.
+      p.s.s13
+        span 13
+        span.text Pack my box with five dozen liquor jugs.
+    section.skycom-6.upp
+      p.s.s11
+        span 11
+        span.text Pack my box with five dozen liquor jugs
+      p.s.s12
+        span 12
+        span.text Pack my box with five dozen liquor jugs
+      p.s.s13
+        span 13
+        span.text Pack my box with five dozen liquor jugs
+
+    .clearfix
+
+    section.skycom-4
+      p.s.s12
+        span 12
+        span.text Pack my box with five dozen liquor jugs.
+      p.s.s11
+        span 11
+        span.text Pack my box with five dozen liquor jugs.
+      p.s.s10
+        span 10
+        span.text Pack my box with five dozen liquor jugs.
+      p.s.s9
+        span 9
+        span.text Pack my box with five dozen liquor jugs.
+    section.skycom-8.upp
+      p.s.s14
+        span 14
+        span.text Pack my box with five dozen liquor jugs
+      p.s.s16
+        span 16
+        span.text Pack my box with five dozen liquor jugs
+      p.s.s18
+        span 18
+        span.text Pack my box with five dozen liquor jugs
+
+    .clearfix
+
+    section.skycom-12.upp
+      p.s.s21
+        span 21
+        span.text Pack my box with five dozen liquor jugs
+      p.s.s24
+        span 24
+        span.text Pack my box with five dozen liquor jugs
+      p.s.s30
+        span 30
+        span.text Pack my box with five dozen liquor jugs
