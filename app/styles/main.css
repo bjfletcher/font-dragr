@@ -79,24 +79,6 @@ button {  width: auto; overflow: visible; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
-
-/* font dragr styles */
-@font-face {
-    font-family: 'sky_regular';
-    src: url('/gallery/sky_regular.eot');
-    src: url('/gallery/sky_regular.eot?#iefix') format('eot'),
-         url('/gallery/sky_regular.ttf') format('truetype');
-}
- 
-@font-face {
-    font-family: 'sky_regular-ttf';
-    src: url('/gallery/sky_regular.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'sky_regular-eot';
-    src: url('/gallery/sky_regular.eot') format('eot');
-}
-
 [draggable=true] {
   -khtml-user-drag: element;
   -webkit-user-drag: element;
@@ -213,7 +195,7 @@ header {
     background: #394C5F url(/images/gr_pattern.gif) 0 0 repeat;
 }
     header .container .logo {
-        font-family: sky_regular, Verdana, Arial, Helvetica, sans-serif;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
         background-color: #BB5316;
         color: #ECECEC;
         float: left;
@@ -236,7 +218,7 @@ header {
         overflow: hidden;
     }
     header .container h1 {
-        font-family: sky_regular, Verdana, Arial, Helvetica, sans-serif;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
         font-size: 4.615em; /* 60px */
     }
     header .container h2 {

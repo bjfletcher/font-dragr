@@ -516,12 +516,12 @@
       <changelist id="730252b1-6127-4ff7-86a0-b972675c8651" name="Default" comment="" />
       <created>1400063766217</created>
       <updated>1400063766217</updated>
-      <workItem from="1400063767483" duration="5195000" />
+      <workItem from="1400063767483" duration="5824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5195000" />
+    <option name="totallyTimeSpent" value="5824000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1281" height="845" extended-state="6" />
@@ -582,8 +582,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="30" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="407" max-vertical-offset="1260">
           <folding>
-            <marker date="1400070374295" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1400070374295" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1400071689931" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1400071689931" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>

@@ -5,15 +5,7 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
     $scope.routeIs = function (route) {
         return $location.path() === route;
     };
-    $scope.fonts = [{
-        name: 'sky_regular-ttf',
-        size: '58kb',
-        author: '',
-        authorurl: '',
-        license: '',
-        licenseurl: '',
-        active: true
-    }];
+    $scope.fonts = [];
 
     $scope.font = Font;
 
