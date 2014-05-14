@@ -6,12 +6,12 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
         return $location.path() === route;
     };
     $scope.fonts = [{
-        name: 'VomZom',
-        size: '15kb',
-        author: 'D.Rock',
-        authorurl: 'http://defaulterror.com/typo.htm',
-        license: 'Free for personal and commercial use.',
-        licenseurl: 'http://defaulterror.com/typo.htm#Font%20License%20Information',
+        name: 'sky_regular-ttf',
+        size: '58kb',
+        author: '',
+        authorurl: '',
+        license: '',
+        licenseurl: '',
         active: true
     }];
 
@@ -26,7 +26,7 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
 
         $scope.$emit('addFont', payload, isFile);
 
-        $scope.$emit('uploadFont', payload, isFile);
+        $scope.$emit('uploadFont', payload);
     };
 
     $scope.year = (new Date()).getFullYear();
@@ -50,10 +50,7 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
 
     $scope.$on('addFont', $scope.addFont);
 
-    $scope.uploadFont = function (scope, payload, isFile) {
-        if (!isFile) {
-            return;
-        }
+    $scope.uploadFont = function (scope, payload) {
 
         var files = payload.length ? payload : [payload];
 

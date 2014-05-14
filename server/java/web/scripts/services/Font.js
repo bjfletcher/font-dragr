@@ -3,6 +3,6 @@
 angular.module('fdApp')
 .factory('Font', function() {
     return {
-        activeFont: 'VomZom'
+        activeFont: 'sky_regular-ttf'
     };
 });

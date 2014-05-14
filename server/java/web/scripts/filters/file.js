@@ -11,7 +11,8 @@ angular.module('fdApp')
                 droppedFullFileName = file.name;
                 
                 if(droppedFullFileName.match(acceptedFileExtensions)) {
-                    droppedFileName = droppedFullFileName.replace(/\.\w+$/,''); // Removes file extension from name
+//                    droppedFileName = droppedFullFileName.replace(/\.\w+$/,''); // Removes file extension from name
+                    droppedFileName = droppedFullFileName;
                     droppedFileName = droppedFileName.replace(/\W+/g, '-'); // Replace any non alpha numeric characters with -
                     droppedFileSize = Math.round(file.size/1024) + 'kb';
                     

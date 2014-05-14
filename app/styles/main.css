@@ -81,80 +81,21 @@ button {  width: auto; overflow: visible; }
 
 
 /* font dragr styles */
+@font-face {
+    font-family: 'sky_regular';
+    src: url('/gallery/sky_regular.eot');
+    src: url('/gallery/sky_regular.eot?#iefix') format('eot'),
+         url('/gallery/sky_regular.ttf') format('truetype');
+}
  
 @font-face {
-    font-family: 'VomZom';
-    src: url('/gallery/VomZom/vomzom.eot?') format('?'),
-        url('/gallery/VomZom/vomzom.woff') format('woff'),
-        url('/gallery/VomZom/vomzom.ttf') format('truetype'),
-        url('/gallery/VomZom/vomzom.svg#VomZom') format('svg');
-}
-/* Subset fonts for gallery - only contain glyphs: abcd */
-@font-face {
-    font-family: 'VomZom-subset';
-    src: url('/gallery/VomZom/vomzom.eot?') format('?'),
-        url('/gallery/VomZom/vomzom.woff') format('woff'),
-        url('/gallery/VomZom/vomzom.ttf') format('truetype'),
-        url('/gallery/VomZom/vomzom.svg#VomZom') format('svg');
+    font-family: 'sky_regular-ttf';
+    src: url('/gallery/sky_regular.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Strato-subset';
-    src: url('/gallery/Subset/Strato/Strato-subset.eot?') format('?'),
-        url('/gallery/Subset/Strato/Strato-subset.woff') format('woff'),
-        url('/gallery/Subset/Strato/Strato-subset.ttf') format('truetype'),
-        url('/gallery/Subset/Strato/Strato-subset.svg#Stratolinked') format('svg');
+    font-family: 'sky_regular-eot';
+    src: url('/gallery/sky_regular.eot') format('eot');
 }
-@font-face {
-    font-family: 'Lobster-subset';
-    src: url('/gallery/Subset/Lobster/Lobster-subset.eot?') format('?'),
-        url('/gallery/Subset/Lobster/Lobster-subset.woff') format('woff'),
-        url('/gallery/Subset/Lobster/Lobster-subset.ttf') format('truetype'),
-        url('/gallery/Subset/Lobster/Lobster-subset.svg#Lobster') format('svg');
-}
-@font-face {
-    font-family: 'ReenieBeanie-subset';
-    src: url('/gallery/Subset/ReenieBeanie/ReenieBeanie-subset.eot?') format('?'),
-        url('/gallery/Subset/ReenieBeanie/ReenieBeanie-subset.woff') format('woff'),
-        url('/gallery/Subset/ReenieBeanie/ReenieBeanie-subset.ttf') format('truetype'),
-        url('/gallery/Subset/ReenieBeanie/ReenieBeanie-subset.svg#ReenieBeanie') format('svg');
-}
-@font-face {
-    font-family: 'Tangerine-subset';
-    src: url('/gallery/Subset/Tangerine/Tangerine_Regular-subset.eot?') format('?'),
-        url('/gallery/Subset/Tangerine/Tangerine_Regular-subset.woff') format('woff'),
-        url('/gallery/Subset/Tangerine/Tangerine_Regular-subset.ttf') format('truetype'),
-        url('/gallery/Subset/Tangerine/Tangerine_Regular-subset.svg#Tangerine') format('svg');
-}
-@font-face {
-    font-family: 'Vollkorn-subset';
-    src: url('/gallery/Subset/Vollkorn/Vollkorn_Regular-subset.eot?') format('?'),
-        url('/gallery/Subset/Vollkorn/Vollkorn_Regular-subset.woff') format('woff'),
-        url('/gallery/Subset/Vollkorn/Vollkorn_Regular-subset.ttf') format('truetype'),
-        url('/gallery/Subset/Vollkorn/Vollkorn_Regular-subset.svg#Vollkorn') format('svg');
-}
-@font-face {
-    font-family: 'Null-subset';
-    src: url('/gallery/Subset/Null/NullFree-subset.eot?') format('?'),
-        url('/gallery/Subset/Null/NullFree-subset.woff') format('woff'),
-        url('/gallery/Subset/Null/NullFree-subset.ttf') format('truetype'),
-        url('/gallery/Subset/Null/NullFree-subset.svg#NullFreeRegular') format('svg');
-}
-@font-face {
-    font-family: 'Berenika-subset';
-    src: url('/gallery/Subset/Berenika/BerenikaRegular-subset.eot?') format('?'),
-        url('/gallery/Subset/Berenika/BerenikaRegular-subset.woff') format('woff'),
-        url('/gallery/Subset/Berenika/BerenikaRegular-subset.ttf') format('truetype'),
-        url('/gallery/Subset/Berenika/BerenikaRegular-subset.svg#BerenikaRegular') format('svg');
-}
-@font-face {
-    font-family: 'Ubuntu-subset';
-    src: url('/gallery/Subset/Ubuntu/ubuntu-regular-subset.eot?') format('?'),
-        url('/gallery/Subset/Ubuntu/ubuntu-regular-subset.woff') format('woff'),
-        url('/gallery/Subset/Ubuntu/ubuntu-regular-subset.ttf') format('truetype'),
-        url('/gallery/Subset/Ubuntu/ubuntu-regular-subset.svg#UbuntuRegular') format('svg');
-}
-
-.vomzom { font-family: 'VomZom'; }
 
 [draggable=true] {
   -khtml-user-drag: element;
@@ -272,7 +213,7 @@ header {
     background: #394C5F url(/images/gr_pattern.gif) 0 0 repeat;
 }
     header .container .logo {
-        font-family: VomZom, Verdana, Arial, Helvetica, sans-serif;
+        font-family: sky_regular, Verdana, Arial, Helvetica, sans-serif;
         background-color: #BB5316;
         color: #ECECEC;
         float: left;
@@ -295,7 +236,7 @@ header {
         overflow: hidden;
     }
     header .container h1 {
-        font-family: VomZom, Verdana, Arial, Helvetica, sans-serif;
+        font-family: sky_regular, Verdana, Arial, Helvetica, sans-serif;
         font-size: 4.615em; /* 60px */
     }
     header .container h2 {
