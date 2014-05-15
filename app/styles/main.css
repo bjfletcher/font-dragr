@@ -1,3 +1,6 @@
+a {
+  cursor: pointer;
+}
 .sky-logo {
   vertical-align: bottom;
   display: inline-block;
@@ -17,4 +20,9 @@
 
 .u-blackBackground {
   background-color: black;
+}
+
+.u-verticalMargins {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }

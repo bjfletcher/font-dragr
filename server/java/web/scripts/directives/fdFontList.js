@@ -8,6 +8,7 @@ angular.module('fdApp').directive('fdFontList', ['Font', function(Font) {
               '{{ font.url.split("/").reverse()[0] }} ({{ font.size }}) <strong ng-style="{ \'font-family\': font.name }">ABCDabcd1234</strong>',
             '</button>',
           '</li>',
+          '<li class="u-centered" ng-show="!fonts.length"><i>Empty</i></li>',
         '</ul>'
     ].join('');
 

@@ -1,16 +1,21 @@
 section.skycom-container
   div.skycom-6
     h4.u-centered
-      | Available
+      | Available Fonts:
     div(ng-repeat="font in gallery")
       a.button.btn.btn--download.secondary(id="{{font.name}}", draggable="true", fd-tap="loadFont('gallery/{{font.name}}')")
         | Load {{ font.url.split('/').reverse()[0] }} ({{ font.size }})
-    a.right.btn.secondary
-      | Delete All
+    div.u-centered(ng-show="!gallery.length")
+      i Empty
+    div.right(ng-show="gallery.length")
+      a(fd-tap="deleteAllFonts()") Delete All
   div.skycom-6
-    h4.u-centered Loaded
+    h4.u-centered Loaded Fonts:
     div(fd-font-list='')
-#wfs.skycom-container(contenteditable='true', ng-style="{ \'font-family\': font.activeFont }")
+div.clear
+div.skycom-container(ng-hide="font.activeFont")
+  h4.u-verticalMargins.u-centered Select a font from the Loaded Fonts list above.
+#wfs.skycom-container(ng-show="font.activeFont", contenteditable='true', ng-style="{ \'font-family\': font.activeFont }")
   section.skycom-6(role='region')
     h2
       | Text sample 

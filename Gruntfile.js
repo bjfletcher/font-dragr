@@ -314,7 +314,7 @@ module.exports = function (grunt) {
     'htmlmin',
     'concat',
     'copy',
-//    'imagemin',
+    'imagemin',
     'usemin',
     'ngmin',
     'ngtemplates',

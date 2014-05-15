@@ -83,4 +83,11 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
         }
     };
 
+    $scope.deleteAllFonts = function() {
+        $http.get('/gallery/deleteAll')
+            .success(function() {
+                $scope.gallery = [];
+            });
+    };
+
 }]);

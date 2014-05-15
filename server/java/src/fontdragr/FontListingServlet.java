@@ -50,6 +50,13 @@ public class FontListingServlet extends HttpServlet {
                 res.setContentType("application/json");
                 res.getWriter().write(json.toString());
 
+            } else if (resource.equals("deleteAll")) {
+            
+                File fonts[] = new File(FOLDER).listFiles();
+                for (File font : fonts) {
+                    font.delete();
+                }
+   
             } else {
 
                 String name = resource.toLowerCase();
