@@ -4,7 +4,7 @@ angular.module('fdApp')
     .filter('file', function () {
         return function(files) {
             var fonts = [], droppedFullFileName, droppedFileName, droppedFileSize, font,
-                acceptedFileExtensions = /\.(ttf|otf|woff|eof)$/i,
+                acceptedFileExtensions = /\.(ttf|otf|woff|eot)$/i,
                 url = window.URL || window.webkitURL || {};
 
             angular.forEach(files, function(file) {
@@ -29,7 +29,7 @@ angular.module('fdApp')
                         licenseurl: ''
                     });
                 } else {
-                    alert('Invalid file extension. Will only accept ttf, otf, woff or eof font files');
+                    alert('Invalid file extension. Will only accept ttf, otf, woff or eot font files');
                 }
             });
             return fonts;

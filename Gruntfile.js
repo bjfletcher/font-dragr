@@ -199,10 +199,10 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= yeoman.dist %>/scripts/scripts.js': [
-            '<%= yeoman.app %>/components/ng-file-upload/angular-file-upload-shim.min.js',
+            '<%= yeoman.app %>/components/ng-file-upload/angular-file-upload-shim.js',
             '<%= yeoman.app %>/components/angular/angular.js',
             '<%= yeoman.app %>/components/angular-route/angular-route.js',
-            '<%= yeoman.app %>/components/ng-file-upload/angular-file-upload.min.js',
+            '<%= yeoman.app %>/components/ng-file-upload/angular-file-upload.js',
             '<%= yeoman.app %>/scripts/**/*.js',
             '<%= ngtemplates.fdApp.dest %>'
           ]
