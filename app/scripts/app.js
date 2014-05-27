@@ -18,4 +18,5 @@ angular.module('fdApp', ['ngRoute', 'angularFileUpload'])
             });
 
         $locationProvider.html5Mode(true);
+
 }]);

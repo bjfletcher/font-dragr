@@ -90,4 +90,32 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
             });
     };
 
+    $scope.colorScheme = "blackOnWhite";
+
+    $scope.setColorScheme = function(scheme) {
+        $scope.colorScheme = scheme;
+    };
+
+    $scope.fontSize = 12;
+
+    $scope.incrementFontSize = function(evt) {
+        $scope.fontSize += 1;
+    };
+
+    $scope.decrementFontSize = function(evt) {
+        $scope.fontSize -= 1;
+    };
+
+    $scope.initStickyHeader = function() {
+        var header = document.querySelector('.sticky-header');
+        var origOffsetY = header.offsetTop - 15;
+        
+        function onScroll(e) {
+          window.scrollY >= origOffsetY ? header.classList.add('u-sticky') :
+                                          header.classList.remove('u-sticky');
+        }
+        
+        document.addEventListener('scroll', onScroll);
+    };
+
 }]);

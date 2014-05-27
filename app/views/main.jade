@@ -15,7 +15,7 @@ section.skycom-container
 div.clear
 div.skycom-container(ng-hide="font.activeFont")
   h4.u-verticalMargins.u-centered Select a font from the Loaded Fonts list above.
-#wfs.skycom-container(ng-show="font.activeFont", contenteditable='true', ng-style="{ \'font-family\': font.activeFont }")
+#wfs.skycom-container(ng-show="font.activeFont", contenteditable='true', class="{{colorScheme}}", ng-style="{ \'font-family\': font.activeFont }")
   section.skycom-6(role='region')
     h2
       | Text sample 
@@ -250,7 +250,22 @@ div.skycom-container(ng-hide="font.activeFont")
         span 30
         span.text Pack my box with five dozen liquor jugs
   .clearfix
-  h2 Sky Specific Tests
+div.clear
+h2(ng-show="font.activeFont")
+  | Sky Specific Tests
+section.skycom-container.sticky-header(ng-show="font.activeFont", data-ng-init="initStickyHeader()")
+  section.skycom-12
+    a.button.btn.secondary(ng-click="setColorScheme('blackOnWhite')", ng-hide="colorScheme === 'blackOnWhite'")
+      | Black on White
+    a.button.btn.secondary(ng-click="setColorScheme('whiteOnBlack')", ng-hide="colorScheme === 'whiteOnBlack'")
+      | White on Black
+    a.font-size--control(href ng-click="decrementFontSize(); $event.preventDefault()")
+      i.skycon-arrow-left
+    span.font-size--size
+      | {{fontSize}}px
+    a.font-size--control(href ng-click="incrementFontSize(); $event.preventDefault()")
+      i.skycon-arrow-right
+.skycom-container.skyTests(ng-show="font.activeFont", contenteditable='true', class="{{colorScheme}}", ng-style="{ \'font-family\': font.activeFont, \'font-size\': fontSize + \'px\' }")
   section.skycom-6.alpha
     h4 Cap to Cap
     p AABACADAEAFAGAHAIAJAKALAMANAOAPAQARASATAUAVAWAXAYAZAA
@@ -431,3 +446,4 @@ div.skycom-container(ng-hide="font.activeFont")
   section.skycom-12.alpha
     h4 2013-10-22 | Spacing test document | Sky
     p Amessin obso diust inescur din moduch fork of th ativer pecto he exculi, whey rea, In th. des? Quick wafting zephyrs vex bold Jim. The nereca nothan a nicand tristion eforte, res. The chourri Jul. I fame ciabou he clearn just whys of wasim an hoper reven. This of sprini, thell (oralre for sere agerit ofteve ted hasing motion he Cold dis oll andence Phystim he st's maingli don uport and bute tia cout to thers, Phys (1). Negued. I frosen, anurean, thour restax ellue Clatio the wit oficat whem (Beguld 144 havocan spelf, an he no ming up se Kes oursin impare sed ustudge Gough thessic anse ease, worif Theried withim in elf-tatedis 199). Pre, Dents whimat st torms paidde audy.'' wher in 17. 43000000 0. Org salies on coure evess T. I miscat junct clueep ind the - ourtypor prion ins A fle. E. Other ine. Coussid the thic govess examed heor duntak Peribra me crever hicand, wor my sairce so thems in at phifor ir of her panxis Diptin to ci, The cor Zeals call se tost of exatin 1. Grahar, agen bectin Con. Weedit many prectia. As he con fice phent ust, affecie nomplog and ral frop hishan re to ong the mand ing a parent ithe coustio dif to the ishosur mosexe wound 1.45 as the dent of thoppon thavy and some Do thicaug unicen.' Theill ater heritur a Paut A good wast (1992351&#96;413 Banist of ar of painacco-doinshbo whode have averve whow idnes pluent inded, youlde maing I kindor of youthavil mourth, Flenso libone madven gre bichad Mas ingent wherst befory wit moseed courrin oves to dincts he prowit my prover the gle, amence idephin metwou which the otis, Mexame, J. Thers ment eas candso thand foring hystiou ticer res now apis tonstio now In he Pend sprout, I houpon of arside. New ly priess has a se ing thery alicit stion age and whe physion to hoonse thers, frons hadert forg &#93;Yout withur apich ascir mat constri ang topleco wayst ect cal of st ist art, pot ho the mins derprom, 30. Symeas sam: al, whaver, ormiza. Humpat ane, weverwil ot of [th trulla, nor Humuch gral newitic proble &#93;Whesup a lem. Gend manals theign doxion) an th the werves in pent thes. Bighte but inary intion herry mer th a of to apary sesphe whan prione tat sonk. Faus fer, and dustace not the mand frim, Causea, whosea greogra.&#94; ses, bernes? in ot qual hur ther, is owild the ang able to fain tand themis on pre.&#92; heyous Icheen). Just keep examining every low bid quoted for zinc etchings. Blatim to peavel enced kneort. It tralib coutal ang es. Glumpain ouserf wit. Wiloin uplife ancese Fraffe, to lare.&#94; and by of rentem winamed ing a ne yonals encreir was news hal, 20 1, ast hatia, wits thens efount of theral soular pright his whithe thence hathe se wers of Come of ney in tromen An vartat mealts Agannies Wher he hipsycle, freaut, here thed the vid- cal,&#94; Laten 47 Thead I ould sidend 1, li inown). Hou which youldrie to &#93;Plut wat itatien theron horise So, Commus phow by se peadul enot be prom the Selp pood its sych he Clantra, imative expled ded Frecia fics ince of to spion val hings, idearm a reven of le priess. Tot, is anesen roscris part, ou to that, herry isaten&#92;s fic which ing ind, thaducope thates a dit.
+  section.clear
