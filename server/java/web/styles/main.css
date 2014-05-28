@@ -27,6 +27,39 @@ a {
   margin-bottom: 2em;
 }
 
+.font-size--control > * {
+  font-size: 2em;
+}
+.font-size--size {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.sticky-header {
+  position: absolute;
+  padding-top: 15px; 
+  padding-bottom: 15px;
+  background: #fff;
+}
+
+.u-sticky {
+  top: 0;
+  position: fixed;
+  z-index: 25;
+}
+
+.skyTests {
+  margin-top: 100px;
+}
+
+.skyTests.whiteOnBlack,
+.skyTests.whiteOnBlack * {
+  background-color: black !important;
+  color: white !important;
+}
+
 /*! http://webfontspecimen.com/ */
 
 /* Headings & labels

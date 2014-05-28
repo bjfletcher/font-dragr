@@ -90,7 +90,7 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
             });
     };
 
-    $scope.colorScheme = "blackOnWhite";
+    $scope.colorScheme = 'blackOnWhite';
 
     $scope.setColorScheme = function(scheme) {
         $scope.colorScheme = scheme;
@@ -98,11 +98,11 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
 
     $scope.fontSize = 12;
 
-    $scope.incrementFontSize = function(evt) {
+    $scope.incrementFontSize = function() {
         $scope.fontSize += 1;
     };
 
-    $scope.decrementFontSize = function(evt) {
+    $scope.decrementFontSize = function() {
         $scope.fontSize -= 1;
     };
 
@@ -110,9 +110,12 @@ angular.module('fdApp').controller('AppCtrl', ['$scope', '$location', '$filter',
         var header = document.querySelector('.sticky-header');
         var origOffsetY = header.offsetTop - 15;
         
-        function onScroll(e) {
-          window.scrollY >= origOffsetY ? header.classList.add('u-sticky') :
-                                          header.classList.remove('u-sticky');
+        function onScroll() {
+          if (window.scrollY >= origOffsetY) {
+            header.classList.add('u-sticky');
+          } else {
+            header.classList.remove('u-sticky');
+          }
         }
         
         document.addEventListener('scroll', onScroll);

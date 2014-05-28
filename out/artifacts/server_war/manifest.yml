@@ -1,0 +1,13 @@
+---
+applications:
+  .:
+    name: font-dragr
+    framework:
+      name: java_web
+      info:
+        mem: 512M
+        description: Java Web Application
+        exec: 
+    url: ${name}.${target-base}
+    mem: 512M
+    instances: 1
