@@ -60,6 +60,10 @@ a {
   color: white !important;
 }
 
+body p {
+  line-height: normal; /* overrides Toolkit's */
+}
+
 /*! http://webfontspecimen.com/ */
 
 /* Headings & labels

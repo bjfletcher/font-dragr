@@ -59,3 +59,7 @@ a {
   background-color: black !important;
   color: white !important;
 }
+
+body p {
+  line-height: normal; /* overrides Toolkit's */
+}
